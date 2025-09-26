@@ -2,10 +2,10 @@
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installed Packages
+- 🎨 **[Material-UI](https://mui.com/material-ui/getting-started/)** - React component library that implements Google's Material Design.
+- 🔗 **[React Router](https://reactrouter.com/start/declarative/routing)** - Installed declarative mode.
+- ✨ **[ESLint](https://eslint.org/docs/latest/) + [Prettier](https://prettier.io/docs/)** - Linting and code formatting.
 
 ## React Compiler
 
@@ -13,63 +13,36 @@ The React Compiler is enabled on this template. See [this documentation](https:/
 
 Note: This will impact Vite dev & build performances.
 
-## Expanding the ESLint configuration
+## Usage
+Use [degit](https://github.com/Rich-Harris/degit) to copy the template to your local project.
+```zsh
+# change `my-project` with your project name.
+npx kamoteshake/minimal-react-vite-template#main my-project
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+# move to the project folder
+cd ./my-project
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+# install all packages
+yarn install
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# start the app locally
+yarn dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Git
+If you want to have your project linked to a repository, you can initialize git inside of your project folder.
+```zsh
+# you can change `main` to your default branch
+git init -b main
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+# adds a remote called origin which links to your git repository
+# change `remote_repository_URL` to your git repository URL
+git remote add origin <remote_repository_URL>
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+# do an initial commit
+git add .
+git commit -m "Initial commit"
+
+# push the changes to the remote repository
+# assuming your branch name is `main`
+git push origin main
