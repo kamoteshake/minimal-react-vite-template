@@ -15,7 +15,7 @@ Note: This will impact Vite dev & build performances.
 
 ## Usage
 Use [degit](https://github.com/Rich-Harris/degit) to copy the template to your local project.
-```zsh
+```console
 # change `my-project` with your project name.
 npx kamoteshake/minimal-react-vite-template#main my-project
 
@@ -31,7 +31,7 @@ yarn dev
 
 ### Git
 If you want to have your project linked to a repository, you can initialize git inside of your project folder.
-```zsh
+```console
 # you can change `main` to your default branch
 git init -b main
 
@@ -39,7 +39,7 @@ git init -b main
 # change `remote_repository_URL` to your git repository URL
 git remote add origin <remote_repository_URL>
 
-# do an initial commit
+# commit changes
 git add .
 git commit -m "Initial commit"
 
