@@ -32,7 +32,7 @@ const Home: React.FC = () => {
       </Box>
       <Typography variant="h1">Vite + React</Typography>
       <Box my={1}>
-        <Button variant="contained" onClick={() => setCount((count) => count + 1)}>
+        <Button variant="contained" onClick={() => setCount(count => count + 1)}>
           count is {count}
         </Button>
       </Box>
