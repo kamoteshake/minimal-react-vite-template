@@ -2,10 +2,15 @@
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
+## Package Manager
+- [Yarn 4](https://yarnpkg.com/)
+
 ## Installed Packages
-- 🎨 **[Material-UI](https://mui.com/material-ui/getting-started/)** - React component library that implements Google's Material Design.
-- 🔗 **[React Router](https://reactrouter.com/start/declarative/routing)** - Installed declarative mode.
-- ✨ **[ESLint](https://eslint.org/docs/latest/) + [Prettier](https://prettier.io/docs/)** - Linting and code formatting.
+- **[React 19](https://react.dev/reference/react)**
+- **[Material-UI](https://mui.com/material-ui/getting-started/)**
+- **[React Router](https://reactrouter.com/start/declarative/routing)**
+- **[ESLint](https://eslint.org/docs/latest/) + [Prettier](https://prettier.io/docs/)**
+- **[Jest](https://jestjs.io/) + [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)**
 
 ## React Compiler
 
@@ -46,3 +51,14 @@ git commit -m "Initial commit"
 # push the changes to the remote repository
 # assuming your branch name is `main`
 git push origin main
+```
+
+### Scripts
+```console
+yarn dev          # starts app locally
+
+yarn build        # builds a production-ready build
+
+yarn test         # runs jest
+yarn test:watch   # runs jest in watch mode
+```
