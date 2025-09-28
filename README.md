@@ -55,10 +55,15 @@ git push origin main
 
 ### Scripts
 ```console
-yarn dev          # starts app locally
+# starts app locally
+yarn dev
 
-yarn build        # builds a production-ready build
+# builds a production-ready build
+yarn build
 
-yarn test         # runs jest
-yarn test:watch   # runs jest in watch mode
+# runs jest
+yarn test
+
+# runs jest with watch mode
+yarn test:watch
 ```
