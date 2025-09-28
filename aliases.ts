@@ -12,3 +12,8 @@ export const viteAliases = directories.reduce<Record<string, string>>((acc, dir)
   acc[dir] = path.resolve(srcPath, dir)
   return acc
 }, {})
+
+export const jestAliases = directories.reduce<Record<string, string>>((acc, dir) => {
+  acc[`^${dir}(/.*)?$`] = `<rootDir>/src/${dir}$1`
+  return acc
+}, {})

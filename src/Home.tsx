@@ -4,7 +4,7 @@ import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 
 import reactLogo from 'assets/react.svg'
-import viteLogo from '/vite.svg'
+import viteLogo from 'assets/vite.svg'
 
 const Home: React.FC = () => {
   const [count, setCount] = useState(0)
@@ -19,12 +19,12 @@ const Home: React.FC = () => {
       justifyContent="center"
     >
       <Box display="flex">
-        <Box mx={4}>
+        <Box mx={4} data-testid="viteLogo">
           <a href="https://vite.dev" target="_blank">
             <img src={viteLogo} alt="Vite logo" style={{ width: 150 }} />
           </a>
         </Box>
-        <Box mx={4}>
+        <Box mx={4} data-testid="reactLogo">
           <a href="https://react.dev" target="_blank">
             <img src={reactLogo} alt="React logo" style={{ width: 150 }} />
           </a>
@@ -32,7 +32,11 @@ const Home: React.FC = () => {
       </Box>
       <Typography variant="h1">Vite + React</Typography>
       <Box my={1}>
-        <Button variant="contained" onClick={() => setCount(count => count + 1)}>
+        <Button
+          data-testid="countButton"
+          variant="contained"
+          onClick={() => setCount(count => count + 1)}
+        >
           count is {count}
         </Button>
       </Box>
